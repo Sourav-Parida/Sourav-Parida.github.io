@@ -1,0 +1,130 @@
+.s2{
+    display: flex;
+    min-height: 25vmax;
+    justify-content: center;
+    align-items:center;
+}
+.s2 .container{
+    width: 90%;
+    display: flex;
+    justify-content:start;
+    align-items:center;
+}
+
+.s2-left{
+    position: relative;
+    overflow: hidden;
+    min-width: 25vmax;
+    margin-left: 4%;
+    margin-right: 3%;
+}
+
+.img2{
+    max-width: 25vmax;
+    max-height: 25vmax;
+    display: block;
+    object-fit: cover;
+}
+
+.s2-right{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    min-height: 25vmax;
+    font-size: 1.7vmax;
+    max-width: 50vmax;
+}
+
+.s2-right h3{
+    font-size: 1.3em;
+    margin-bottom: 2%;
+    color: rgb(122, 241, 10);
+}
+
+.s2-right p{
+    margin-top: 2%;
+    color: rgba(166, 209, 214, 0.89);
+}
+
+
+.s3{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    min-height: 30vmax;
+    margin-bottom: 10%;
+}
+
+
+.s3 h3{
+    font-size: 2.5vmax;
+    color: aqua;
+}
+
+.s3 .heading{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.s3-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    max-width: 70%;
+}
+
+.s3-box{
+    position: relative;
+    border-radius: 3vw;
+    overflow: hidden;
+    display: flex;
+    height: 15vw;
+}
+
+.s3-box img{
+    width: 100%;
+}
+
+.s3-box .img-layer h4{
+    font-size:2.5vw; 
+    text-align: center;
+
+}
+.s3-box .img-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(63, 172, 121, 0.3) 20%,
+    rgb(44, 80, 133));
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.s3-box .img-layer:hover{
+    background: linear-gradient(to right, rgba(74, 126, 168, 0.3) 20%,
+    rgb(92, 160, 137));
+    color: rgb(251, 255, 0);
+
+}
+
+
+.s3-container a{
+    text-decoration: none;
+    cursor: pointer;
+    color: rgb(253, 135, 1);
+}
+
+.s3-box .img-layer h4:hover{
+    font-size:2.7vw;
+    color: rgb(255, 251, 0);
+    
+}
