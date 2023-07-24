@@ -200,10 +200,10 @@ footer {
 
 .footer {
     display: flex;
-    padding: 20px 87px;
-    justify-content: space-around;
+    padding: 2vmax 8vmax;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 40vmax;
+    gap: 20vmax;
 }
 
 .footer ul {
