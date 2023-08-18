@@ -41,13 +41,13 @@ nav{
 .navbar a {
     text-decoration: none;
     color: #b9fc01;
-    font-size: 1.3vmax;
+    font-size: 1.5vmax;
 }
 
 .navbar a:hover{
     cursor: pointer;
     color: rgb(253, 237, 6);
-    font-size: 1.4vmax;
+    font-size: 1.6vmax;
 }
 
 .logo a:hover{
@@ -196,18 +196,15 @@ nav{
 
 footer {
     background-color: rgb(15 15 39);
-    font-size: 1vmax;
-    
 }
 
 .footer {
-    
     display: flex;
-    justify-content: space-evenly;
+    padding: 20px 87px;
+    justify-content: space-around;
     align-items: center;
-    gap: 20vmax;
+    gap: 40vmax;
 }
-
 
 .footer ul {
     list-style-type: none;
@@ -215,7 +212,7 @@ footer {
 
 .footer div {
     width: 30vmax;
-    margin-top: 1%;
+    
 }
 
 footer .footer-rights {

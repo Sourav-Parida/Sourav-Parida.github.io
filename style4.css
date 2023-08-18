@@ -23,8 +23,8 @@
 }
 
 .s4-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 2.5rem;
     max-width: 70%;
