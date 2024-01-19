@@ -133,4 +133,7 @@
 }
 
 @media screen and (max-width:650px){
+    .s3-box .img-layer h4{
+        font-size: 25px;
+    }
 }
