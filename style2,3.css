@@ -94,7 +94,7 @@
 }
 
 .s3-box .img-layer h4{
-    font-size: 30px; 
+    font-size: 25px; 
     text-align: center;
 
 }
@@ -133,10 +133,4 @@
 }
 
 @media screen and (max-width:650px){
-    .s3-container{
-        flex-direction: column;
-    }
-    .s3-box .img-layer h4{
-        font-size: 20px; 
-    }
 }
