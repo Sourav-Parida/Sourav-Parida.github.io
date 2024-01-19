@@ -85,8 +85,8 @@
     border-radius: 3vw;
     overflow: hidden;
     display: flex;
-    height:15vw;
-    width:20vw;
+    height:180px;
+    width:250px;
 }
 
 .s3-box img{
@@ -94,7 +94,7 @@
 }
 
 .s3-box .img-layer h4{
-    font-size:2.5vw; 
+    font-size: 30px; 
     text-align: center;
 
 }
@@ -130,4 +130,10 @@
     font-size:2.7vw;
     color: rgb(255, 251, 0);
     
+}
+
+@media screen and (max-width:650px){
+    .s3-container{
+        flex-direction: column;
+    }
 }
