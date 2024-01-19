@@ -136,4 +136,7 @@
     .s3-container{
         flex-direction: column;
     }
+    .s3-box .img-layer h4{
+        font-size: 20px; 
+    }
 }
