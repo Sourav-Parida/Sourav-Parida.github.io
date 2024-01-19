@@ -25,6 +25,7 @@
 .s4-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    justify-content: center;
     align-items: center;
     gap: 2.5rem;
     max-width: 70%;
@@ -35,7 +36,8 @@
     border-radius: 3vw;
     overflow: hidden;
     display: flex;
-    height: 15vw;
+    height:15vw;
+    width:20vw;
 }
 
 .s4-box img{
