@@ -112,14 +112,14 @@ nav{
 }
 
 .rounded-button-r1:hover {
-    background: #2a2e26;
+    background: #60615f;
 }
 .rounded-button-r2:hover {
     background: rgb(12, 133, 214);
 }
 
 .rounded-button-r1{
-    background: #000000;
+    background: #bbb9b9;
 
     width: 3.5vmax;
     height: 3.5vmax;
@@ -147,6 +147,26 @@ nav{
     border: none;
     text-decoration: none;
 }
+
+.rounded-button-r3:hover {
+    background: #383838;
+}
+
+.rounded-button-r3{
+    background: #2b2a2a;
+    width: 3.5vmax;
+    height: 3.5vmax;
+    color: hsl(0, 0%, 100%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    text-decoration: none;
+}
+
+
 
 .buttons .bn2{
     background-color: azure;

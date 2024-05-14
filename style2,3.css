@@ -73,8 +73,6 @@
 .s3-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     gap: 2.5rem;
     max-width: 70%;
@@ -85,8 +83,7 @@
     border-radius: 3vw;
     overflow: hidden;
     display: flex;
-    height:180px;
-    width:250px;
+    height: 15vw;
 }
 
 .s3-box img{
@@ -94,7 +91,7 @@
 }
 
 .s3-box .img-layer h4{
-    font-size: 2.4em; 
+    font-size:2.5vw; 
     text-align: center;
 
 }
@@ -127,10 +124,7 @@
 }
 
 .s3-box .img-layer h4:hover{
-    font-size:2.5em;
+    font-size:2.7vw;
     color: rgb(255, 251, 0);
     
-}
-
-@media screen and (max-width:800px){
 }
