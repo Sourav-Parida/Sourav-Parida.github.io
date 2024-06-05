@@ -83,18 +83,20 @@ window.addEventListener("scroll", () => {
     });
 }),
   console.log(
-    "%c Designed and Developed by Vinod Jangid ",
     "background-image: linear-gradient(90deg,#8000ff,#6bc5f8); color: white;font-weight:900;font-size:1rem; padding:20px;"
   );
 let mybutton = document.getElementById("backtotopbutton");
+
 function scrollFunction() {
   document.body.scrollTop > 400 || document.documentElement.scrollTop > 400
     ? (mybutton.style.display = "block")
     : (mybutton.style.display = "none");
 }
+
 function scrolltoTopfunction() {
   (document.body.scrollTop = 0), (document.documentElement.scrollTop = 0);
 }
+
 (window.onscroll = function () {
   scrollFunction();
 }),
@@ -105,11 +107,3 @@ function scrolltoTopfunction() {
     },
     !1
 );
-
-  windowResize = (e) => {
-    (mouseXEndPoint = window.innerWidth),
-      (mouseYEndPoint = window.innerHeight),
-      (mouseXRange = mouseXEndPoint - mouseXStartPoint);
-  };
-window.addEventListener("mousemove", mouseMove),
-  window.addEventListener("resize", windowResize);
