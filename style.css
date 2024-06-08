@@ -182,6 +182,8 @@ html {
 .mobiletogglemenu {
   display: none;
 }
+
+
 #switchforsetting:checked + #labelforsetting {
   transform: rotate(180deg);
   transition-duration: 0.5s;
@@ -441,6 +443,7 @@ noscript {
     opacity: 0.5;
   }
 }
+
 .landing-page-container {
   width: 100%;
   height: calc(100vh - 115px);
@@ -1376,9 +1379,11 @@ html {
   .hamburger {
     background-color: transparent;
   }
-  .navbar-tabs {
+
+  .navbar-tabs-ul{
     display: none;
   }
+
   .mobile-navbar-tabs-ul a,
   .mobiletogglemenu {
     text-decoration: none;
@@ -1497,6 +1502,7 @@ html {
     height: 30px;
     width: fit-content;
   }
+
   .about-info,
   .dp,
   .info-dp-section {
@@ -1576,8 +1582,8 @@ html {
     height: 140px;
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
   }
   .setting-container {
