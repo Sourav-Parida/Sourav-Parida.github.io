@@ -424,11 +424,11 @@ noscript {
 }
 .blob {
   position: absolute;
-  right: -15%;
-  top: 0;
+  right: 0%;
+  /* top: 0; */
   background-color: var(--color-light-purple);
-  width: 600px;
-  height: 100vh;
+  width: 40vw;
+  height: 40vw;
   filter: blur(300px);
   opacity: 0.3;
   animation: 1s linear infinite alternate-reverse breath;
@@ -1376,6 +1376,9 @@ html {
   .hamburger {
     background-color: transparent;
   }
+  .navbar-tabs {
+    display: none;
+  }
   .mobile-navbar-tabs-ul a,
   .mobiletogglemenu {
     text-decoration: none;
@@ -1465,6 +1468,7 @@ html {
     transform: translateX(100%);
     transition-duration: 1s;
   }
+
   .show-toggle-menu {
     transform: translateX(0);
     transition-duration: 0.6s;
@@ -1540,6 +1544,18 @@ html {
   html {
     font-size: 50%;
   }
+  .blob {
+    position: absolute;
+    right: 0%;
+    top: 40%; 
+    background-color: var(--color-light-purple);
+    width: 55vw;
+    height: 55vw;
+    filter: blur(300px);
+    opacity: 0.3;
+    animation: 1s linear infinite alternate-reverse breath;
+  }
+
   .text-content {
     padding-left: 0;
     width: 80%;
@@ -1593,6 +1609,20 @@ html {
   .navbar {
     height: 70px;
   }
+
+  .blob {
+    position: absolute;
+    right: 0%;
+    top: 20%; 
+    background-color: var(--color-light-purple);
+    width: 65vw;
+    height: 65vw;
+    filter: blur(300px);
+    opacity: 0.3;
+    animation: 1s linear infinite alternate-reverse breath;
+  }
+
+
   #hamburger {
     margin-right: 20px;
     height: 115px;
