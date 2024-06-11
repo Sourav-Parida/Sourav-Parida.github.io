@@ -60,7 +60,7 @@
               &#60;/Projects&#62;
             </a>
           </li>
-          <li>
+          <!-- <li>
             <div class="contact-btn-div" data-aos-delay="800">
               <div class="setting-container" id="setting-container">
                 <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
@@ -80,7 +80,7 @@
                     class="needtobeinvert"></label>
                 </div>
               </div>
-            </li>
+            </li> -->
             <!-- setting div ends -->
           </ul>
       </div>
@@ -193,11 +193,32 @@
           I am a passionate and aspiring Backend Developer currently in my third year of B.Tech.
           With a strong foundation in Java and backend technologies like Oracle. 
           <br />
-          <br />
           I am eager to apply my skills to real-world projects and continue growing as a developer.
         </p>
-        </div>
+        <!-- <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="200"> -->
+          <div class="setting-container" id="setting-container">
+            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
+
+            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
+              aria-label="settings for sound and appearance"></label>
+
+            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
+              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
+              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
+                aria-label="switch appearance"></label>
+            </div>
+
+            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
+              <input type="checkbox" id="switchforsound" onclick="playpause()" />
+              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
+                class="needtobeinvert"></label>
+            </div>
+          </div>
+          <!-- setting div ends -->
+        <!-- </div> -->
+        <!-- contact-btn-div -->
       </div>
+      
     </section>
     <!-- landing page ends here -->
 

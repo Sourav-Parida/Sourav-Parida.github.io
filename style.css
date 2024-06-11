@@ -139,6 +139,7 @@ html {
   --tech-stack-box-border-color: #dad5cf;
 }
 .setting-container {
+  margin-left: 10%;
   width: 60px;
   height: 50px;
   display: flex;
@@ -468,7 +469,7 @@ noscript {
   align-items: flex-end;
 }
 #name{
-  font-size: 8rem;
+  font-size: 7rem;
   width: fit-content;
   display: flex;
   font-weight: 650;
@@ -633,10 +634,10 @@ noscript {
   }
 }
 #info-para {
-  width: 75%;
-  padding-top: 30px;
+  width: 80%;
+  padding-top: 15px;
   color: var(--color-ddd-color);
-  line-height: 20px;
+  /* line-height: 20px; */
 }
 .contact-btn-div {
   width: fit-content;
