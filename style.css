@@ -1662,13 +1662,17 @@ html {
     border-top-left-radius: 10px;
   }
   .tech-stack-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    /* display: grid; */
+    /* grid-template-columns: 2fr 2fr; */
+    flex-wrap: wrap;
+    gap: 30px;
   }
   .tech-stack-box {
-    width: 100%;
-    height: calc(76vw / 2);
+    width: 25%;
+    height: calc(76vw / 4);
+  }
+  .tech-stack-box img {
+    width: 70%;
   }
 }
 
