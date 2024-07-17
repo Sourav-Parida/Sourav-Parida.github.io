@@ -532,9 +532,10 @@ noscript {
   align-items: flex-start;
   background: linear-gradient(
     -45deg,
-    var(--color-light-blue),
     var(--color-light-purple),
-    var(--color-light-blue),
+    var(--color-light-purple),
+    /* var(--color-light-blue), */
+    var(--color-light-purple),
     var(--color-light-purple)
   );
   background-clip: text;
@@ -569,7 +570,7 @@ noscript {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #03e6ff;
+  background-color: #22d1e4;
   -webkit-animation: 0.9s both jello-vertical;
   animation: 0.9s both jello-vertical;
 }
@@ -578,33 +579,6 @@ noscript {
 .dp::before,
 .letsTalkBtn {
   background-color: transparent;
-}
-@-webkit-keyframes jello-vertical {
-  0%,
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(0.85, 1.15, 1);
-    transform: scale3d(0.85, 1.15, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
 }
 @keyframes jello-vertical {
   0%,
@@ -1006,7 +980,22 @@ footer {
   transition-duration: 0.3s;
 }
 
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1.5em;
+  width: 3em;
+  margin-right: 2em;
+  max-height: 10em;
+}
+.home__social-icon {
+  font-size: 2.5em;
+  color:#00b7ff;
+}
 
+.home__social-icon:hover {
+  color: rgb(238, 119, 119);
+}
 
 
 
@@ -1645,9 +1634,16 @@ html {
   .landing-page-container {
     height: 85vh;
   }
-  .text-content {
+  .text-content{
     justify-content: flex-start;
   }
+
+  .home_social{
+    display: flex;
+    justify-content: flex-start;
+    height: 50%;
+  }
+
   .project-box {
     height: 550px;
   }
