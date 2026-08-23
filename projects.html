@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Projects - Sourav Kumar Parida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-brand"><span class="dot"></span>Sourav Kumar Parida</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#achievements">Achievements</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="sound-control">
+        <button class="icon-btn" id="soundToggle" aria-label="Sound settings" aria-expanded="false">
+          <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+        </button>
+        <div class="sound-panel" id="soundPanel">
+          <div class="sound-panel-row">
+            <span>Ambient sound</span>
+            <button class="mute-btn" id="muteBtn">Unmute</button>
+          </div>
+          <div class="volume-row">
+            <label for="volumeSlider">Volume</label>
+            <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Music volume">
+          </div>
+          <ul class="track-list" id="trackList">
+            <li data-track="assets/audio/f1.mp3" class="active">f1</li>
+            <li data-track="assets/audio/oppenheimer.mp3">oppenheimer</li>
+            <li data-track="assets/audio/interstellar.mp3">interstellar</li>
+          </ul>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark mode">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<audio id="bgAudio" loop preload="none">
+  <source src="assets/audio/lofi-focus.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+  <div class="container page-header">
+    <a href="index.html#projects" class="back-link"><i class="fa-solid fa-arrow-left"></i> back to home</a>
+    <!-- <div class="eyebrow"><span class="idx">03</span> Projects</div> -->
+    <h1 class="section-title">All Projects</h1>
+    <p class="section-sub">Filter by technology to see how each project was built.</p>
+
+    <div class="project-tabs" data-filter-group=".project-grid .card-project" data-empty-target="#no-projects">
+      <button class="project-tab active" data-filter="all">All</button>
+      <button class="project-tab" data-filter="ml">Machine Learning</button>
+      <button class="project-tab" data-filter="dataeng">Data Engineering</button>
+      <button class="project-tab" data-filter="azure">Azure</button>
+      <button class="project-tab" data-filter="fullstack">Full-Stack</button>
+      <button class="project-tab" data-filter="python">Python</button>
+      <button class="project-tab" data-filter="java">Java</button>
+      <button class="project-tab" data-filter="database">Database</button>
+    </div>
+
+    <div class="project-grid wide">
+
+      <div class="card-project" data-tags="ml,python">
+        <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">ML / RESEARCH</span></div>
+        <h3>NeuroAdaptive AI</h3>
+        <p class="desc">EEG-based multi-task mental-state prediction and forecasting, combining CNN, BiLSTM and Transformer architectures. Built during the Samsung PRISM research internship.</p>
+        <p class="metric">↳ multi-task prediction + forecasting from raw EEG</p>
+        <div class="stack-row">
+          <span class="stack-pill">Python</span><span class="stack-pill">PyTorch</span>
+          <span class="stack-pill">CNN</span><span class="stack-pill">BiLSTM</span><span class="stack-pill">Transformer</span>
+        </div>
+        <div class="card-links">
+          <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+          <!-- <a href="#"><i class="fa-solid fa-circle-info"></i> Details</a> -->
+        </div>
+      </div>
+
+      <div class="card-project" data-tags="dataeng,azure">
+        <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">DATA ENGINEERING</span></div>
+        <h3>Amazon Prime ETL Pipeline</h3>
+        <p class="desc">End-to-end Azure data engineering pipeline moving raw data through curated layers into Power BI dashboards, orchestrated with Azure Data Factory.</p>
+        <p class="metric">↳ raw → curated → Power BI, fully orchestrated on ADF</p>
+        <div class="stack-row">
+          <span class="stack-pill">ADLS Gen2</span><span class="stack-pill">Databricks</span>
+          <span class="stack-pill">Delta Lake</span><span class="stack-pill">ADF</span><span class="stack-pill">Power BI</span>
+        </div>
+        <div class="card-links">
+          <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+          <!-- <a href="#"><i class="fa-solid fa-circle-info"></i> Details</a> -->
+        </div>
+      </div>
+
+      <div class="card-project" data-tags="fullstack,java,database">
+        <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">FULL-STACK</span></div>
+        <h3>Staybnb</h3>
+        <p class="desc">Full-stack property rental platform with listing search, booking flow, host dashboard and authentication.</p>
+        <p class="metric">↳ REST API + relational schema for bookings & listings</p>
+        <div class="stack-row">
+          <span class="stack-pill">Java</span><span class="stack-pill">Spring Boot</span>
+          <span class="stack-pill">Angular</span><span class="stack-pill">MySQL</span>
+        </div>
+        <div class="card-links">
+          <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+          <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a> -->
+        </div>
+      </div>
+
+      <div class="card-project" data-tags="python,database">
+        <div class="tag-row"><span class="cat-tag mono">TOOLING</span></div>
+        <h3>Student Answer Script Evaluation Tool</h3>
+        <p class="desc">Automated evaluation of Neo4j Cypher query answers, comparing student submissions against reference queries and scoring results.</p>
+        <p class="metric">↳ automated grading for graph-database coursework</p>
+        <div class="stack-row">
+          <span class="stack-pill">Python</span><span class="stack-pill">Neo4j</span><span class="stack-pill">Cypher</span>
+        </div>
+        <div class="card-links">
+          <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+          <!-- <a href="#"><i class="fa-solid fa-circle-info"></i> Details</a> -->
+        </div>
+      </div>
+
+    </div>
+
+    <div id="no-projects" class="empty-state" style="display:none; margin-top:24px;">
+      No projects match this filter yet.
+    </div>
+  </div>
+</main>
+
+<footer class="footer">© <span class="js-year"></span> Sourav Kumar Parida — built with HTML, CSS , JS & Github-Copilot.</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

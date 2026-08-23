@@ -1,559 +1,547 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#000" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sourav Kumar Parida - Software Engineering</title>
+<meta name="description" content="Portfolio of a Java backend developer and Computer Science Engineer specializing in cloud, data engineering and ML.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
 
-  <title>Sourav Parida | Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
-  <!-- aos cdn -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-  <!-- google fonts-->
-
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Passions+Conflict&family=Orbitron&family=Fira+Code&family=Six+Caps" />
-
-
-     <!--==================== UNICONS ====================-->
-     <link
-     rel="stylesheet"
-     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-   /> 
-
-<body class="body">
-  <audio loop="" id="audioPlayer" style="display: none">
-    <source src="src/mp3/preloader.mp3" type="audio/mp3" />
-  </audio>
-  <div id="preloader"></div>
-
-  <header>
-    <div class="navbar" id="navbar">
-      <div class="hey">Hello!</div>
-      <div class="logo" tabindex="0" aria-label="logo">
-        <div class="logo-top">
-          <a href="#home" aria-label="about menu button">
-            <img src="src/png/nav-avatar.png" alt="animation-head" id="nav-avatar"/>
-          </a>
-          </div>
-        </div>
-      <div class="navbar-tabs" id="navbar-tabs">
-        <ul class="navbar-tabs-ul">
-          
-          <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
-            <a href="#about" aria-label="about menu button">
-              &#60;/AboutMe&#62;
-            </a>
-          </li>
-
-          <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
-            <a href="#skills" aria-label="skills menu button">
-              &#60;/Skills&#62;
-            </a>
-          </li>
-
-          <li class="certificate" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
-            <a href="#certificate" aria-label="certificate menu button">
-              &#60;/Certificate&#62;
-            </a>
-          </li>
-
-          <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
-            <a href="#projects" aria-label="projects menu button">
-              &#60;/Projects&#62;
-            </a>
-          </li>
-          </ul>
-      </div>
-      <!-- navbar tabs ends -->
-    </div>
-  </header>
-  <!-- header ends here -->
-
-  <main>
-    <!-- hamburger -->
-    <div class="hamburger" id="hamburger" data-aos="fade">
-      <div class="hamburgerbase">
-        <button id="hamburger-button" onclick="hamburgerMenu()" tabindex="0" aria-label="Menu Button">
-          <span class="burger-bar" id="burger-bar1"></span>
-          <span class="burger-bar" id="burger-bar2"></span>
-          <span class="burger-bar" id="burger-bar3"></span>
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand"><span class="dot"></span>Sourav Kumar Parida</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="sound-control">
+        <button class="icon-btn" id="soundToggle" aria-label="Sound settings" aria-expanded="false">
+          <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
         </button>
+        <div class="sound-panel" id="soundPanel">
+          <div class="sound-panel-row">
+            <span>Ambient sound</span>
+            <button class="mute-btn" id="muteBtn">Unmute</button>
+          </div>
+          <div class="volume-row">
+            <label for="volumeSlider">Volume</label>
+            <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Music volume">
+          </div>
+          <ul class="track-list" id="trackList">
+            <li data-track="assets/audio/f1.mp3" class="active">f1</li>
+            <li data-track="assets/audio/oppenheimer.mp3">oppenheimer</li>
+            <li data-track="assets/audio/interstellar.mp3">interstellar</li>
+          </ul>
+        </div>
       </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark mode">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     </div>
-    <!-- hamburger -->
+  </div>
+</nav>
+<audio id="bgAudio" loop preload="none">
+  <source src="assets/audio/lofi-focus.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- mobile bar -->
-<div class="mobiletogglemenu" id="mobiletogglemenu">
-  <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
-    <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
-      <a href="#home" tabindex="0" aria-label="Home menu button">
-        &#60;/Home&#62;
-      </a>
-    </li>
-    <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
-      <a href="#about" tabindex="0" aria-label="about menu button">
-        &#60;/AboutMe&#62;
-      </a>
-    </li>
-    <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
-      <a href="#skills" tabindex="0" aria-label="skills menu button">
-        &#60;/Skills&#62;
-      </a>
-    </li>
-    <li id="certificate-mobile-tab" class="mobile-navbar-tabs-li certificate activeThismobiletab" onclick="hidemenubyli()">
-      <a href="#certificate" tabindex="0" aria-label="certificate menu button">
-        &#60;/Certificate&#62;
-      </a>
-    </li>
-    <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
-      <a href="#projects" tabindex="0" aria-label="projects menu button">
-        &#60;/Projects&#62;
-      </a>
-    </li>
-  </ul>
+<!-- ============ PIPELINE RAIL (signature element) ============ -->
+<div class="pipeline-rail" aria-hidden="true">
+  <div class="rail-node" data-target="home" data-label="home"></div>
+  <div class="rail-node" data-target="about" data-label="about"></div>
+  <div class="rail-node" data-target="skills" data-label="skills"></div>
+  <div class="rail-node" data-target="projects" data-label="projects"></div>
+  <div class="rail-node" data-target="experience" data-label="experience"></div>
+  <div class="rail-node" data-target="certifications" data-label="certs"></div>
+  <div class="rail-node" data-target="research" data-label="research"></div>
+  <div class="rail-node" data-target="achievements" data-label="achievements"></div>
+  <div class="rail-node" data-target="contact" data-label="contact"></div>
 </div>
-<!-- mobile toggle menu ends -->
 
+<main>
 
-    <section class="landing-page-container" id="home">
-      <div class="blob"></div>
-      <div class="home_social">
-      <div class="home__social">
-        <a
-          href="https://www.linkedin.com/in/sourav-kumar-parida/"
-          target="_blank"
-          class="home__social-icon"
-        >
-          <i class="uil uil-linkedin-alt"></i>
-        </a>
-        <a
-          href="https://github.com/Sourav-Parida"
-          target="_blank"
-          class="home__social-icon"
-        >
-          <i class="uil uil-github-alt"></i>
-        </a>
-        <a
-          href="https://leetcode.com/u/sourav-parida/"
-          target="_blank"
-          class="home__social-icon"
-        >
-        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="currentColor" d="M13.483 0a1.37 1.37 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.3 5.3 0 0 0-1.209 2.104a5 5 0 0 0-.125.513a5.5 5.5 0 0 0 .062 2.362a6 6 0 0 0 .349 1.017a5.9 5.9 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.38 1.38 0 0 0-1.951-.003l-2.396 2.392a3.02 3.02 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.7 2.7 0 0 1 .066-.523a2.55 2.55 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0m-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"></path></svg>
-        </a>
-      </div>
-      </div>
-
-      <div class="text-content">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-          <p class="jello">N</p>
-          <p class="jello">a</p>
-          <p class="jello">m</p>
-          <p class="jello">a</p>
-          <p class="jello">s</p>
-          <p class="jello">t</p>
-          <p class="jello">e</p>
-          <p class="jello">(</p>
-          <p class="jello">)</p>
-          <p class="jello">;</p>
-          &nbsp;
-          <p class="jello">I</p>
-          <p class="jello">'</p>
-          <p class="jello">m</p>
-        </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200">
-          <p class="jello">S</p>
-          <p class="jello">o</p>
-          <p class="jello">u</p>
-          <p class="jello">r</p>
-          <p class="jello">a</p>
-          <p class="jello">v</p>
-          &nbsp;
-          <p class="jello">K</p>
-          <p class="jello">u</p>
-          <p class="jello">m</p>
-          <p class="jello">a</p>
-          <p class="jello">r</p>
-          &nbsp;
-          <p class="jello">P</p>
-          <p class="jello">a</p>
-          <p class="jello">r</p>
-          <p class="jello">i</p>
-          <p class="jello">d</p>
-          <p class="jello">a</p>
-        </article>
-
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
-          <div>
-            <p class="jello">W</p>
-            <p class="jello">e</p>
-            <p class="jello">l</p>
-            <p class="jello">c</p>
-            <p class="jello">o</p>
-            <p class="jello">m</p>
-            <p class="jello">e</p>
-            <p class="jello">!</p>
-          </div>
-        </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          I am a passionate and aspiring Backend Developer currently in my third year of B.Tech.
-          With a strong foundation in Java and backend technologies like Oracle. 
-          <br />
-          I am eager to apply my skills to real-world projects and continue growing as a developer.
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-kicker"><span class="pulse"></span> available for full-time roles & collaborations</div>
+        <h1 class="hero-name">Sourav Kumar Parida</h1>
+        <h2 class="hero-role mono">
+          Backend & Data Engineer - Java, Cloud & AI/ML
+        </h2>
+        
+        <p class="hero-desc">
+          Focused on backend systems, data pipelines and applied machine learning. Skilled in Java and Python,
+          building robust services, scalable ETL pipelines, and ML workflows on cloud platforms.
         </p>
-        <!-- <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="200"> -->
-          <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-              aria-label="settings for sound and appearance"></label>
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
-              <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                class="needtobeinvert"></label>
-            </div>
-          </div>
-          <!-- setting div ends -->
-        <!-- </div> -->
-        <!-- contact-btn-div -->
+        <div class="hero-actions">
+          <a href="https://drive.google.com/file/d/1V8_vzR-EkRgOmvVnxZ4bnPHewKZYtK7k/view?usp=drive_link" class="btn btn-primary" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>3+</b><span>Projects</span></div>
+          <div class="hero-stat"><b>1</b><span>Research Publication</span></div>
+          <div class="hero-stat"><b>2</b><span>Internships</span></div>
+          <div class="hero-stat"><b>4+</b><span>Certifications</span></div>
+        </div>
       </div>
       
-    </section>
-    <!-- landing page ends here -->
-
-    <section class="about-section-container" id="about" data-aos="fade-up">
-      <div class="about-section">
-        <div class="section-heading">
-          <h2 class="section-heading-article" tabindex="0" aria-label="About me heading">
-            &#60;/AboutMe&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="info-dp-section">
-          <div class="about-info">
-            <p tabindex="0">
-              Hi, I'm Sourav Kumar Parida, a passionate third-year B.Tech student specializing 
-              in Computer Science and Engineering at Kalinga Institute of Industrial Technology (KIIT), 
-              Bhubaneswar.
-            </p>
-            <br />
-            <p tabindex="0">
-              With a solid academic background and a keen interest in backend development, 
-            </p>
-            <br />
-            <p tabindex="0">
-              passionate about backend development with skills in Java, SQL, and cloud technologies.
-            </p>
-            <!-- Resume button -->
-        <a href="https://drive.google.com/file/d/1LDSrmMPB-a4pctEfX98GW0Hz4tMliJR1/view?usp=drive_link" target="_blank">
-          <button class="resume-btn" id="resume-btn" >
-            <div class="sign">
-              <svg viewBox="0 0 640 512">
-                <path
-                  d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-              </svg>
-            </div>
-            <div class="text">Resume</div>
-          </button>
-        </a>
-          </div>
-          <div class="dp" data-aos="fade-up">
-          <img src="src/png/avtar.png" alt="display pic" class="" id=""/>
+      <div class="hero-visual">
+        <div class="code-mock">
+          <div class="code-mock-bar">
+            <div class="code-mock-dots"><span></span><span></span><span></span></div>
+            <div class="code-mock-tabs" role="tablist" aria-label="Select language">
+              <span class="code-tab on" data-lang="python" role="tab" aria-selected="true">Python</span>
+              <span class="code-tab" data-lang="java" role="tab" aria-selected="false">Java</span>
             </div>
           </div>
-        </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about section ends  -->
+          <div class="code-mock-body">
+            <div class="code-block active" data-lang="python">
+              <div><span class="ln">01</span><span class="k">import</span> <span class="f">pandas</span> as <span class="f">pd</span></div>
+              <div><span class="ln">02</span><span class="c"># simple ETL step: read, transform, write</span></div>
+              <div><span class="ln">03</span>def load_data(path):</div>
+              <div><span class="ln">04</span>&nbsp;&nbsp;<span class="k">return</span> pd.read_csv(path)</div>
+              <div><span class="ln">05</span></div>
+              <div><span class="ln">06</span>def transform(df):</div>
+              <div><span class="ln">07</span>&nbsp;&nbsp;df['ts'] = pd.to_datetime(df['ts'])</div>
+              <div><span class="ln">08</span>&nbsp;&nbsp;<span class="k">return</span> df.groupby('user').agg({'value':'mean'})</div>
+            </div>
 
-    <section class="skills-section-container" id="skills">
-      <div class="skills-section">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/Skills&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
-            aria-label="As a frontend a developer these are the skills i have">
-            Tech Stack
-          </h3>
-          <ul class="tech-stack-wrapper">
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/clogo.png" alt="c language skill" class="tech-stack-logo" />
-              <span class="tooltip">C</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/java.png" alt="Java language skill" class="tech-stack-logo" />
-              <span class="tooltip">JAVA</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/python.png" alt="Java language skill" class="tech-stack-logo" />
-              <span class="tooltip">PYTHON</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/oracle.png" alt="Oracle skill" class="tech-stack-logo" />
-              <span class="tooltip">ORACLE</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/mysql.png" alt="Mysql skill" class="tech-stack-logo" />
-              <span class="tooltip">MYSQL</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
-              <span class="tooltip">HTML</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
-              <span class="tooltip">CSS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
-              <span class="tooltip">JS</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
-              <span class="tooltip">GITHUB</span>
-            </li>
-
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
-              <span class="tooltip">GIT</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- skills section ends -->
-  
-    
-    <section class="skills-section-container" id="certificate">
-      <div class="skills-section">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/certificates&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-
-        <div class="frontend-dev-section">
-          <ul class="certificate-wrapper">
-
-            <a href="./src/certificates/AZ-900 Certificate.png" target="_blank">
-            <li class="certificate-box" data-aos="fade-up">
-              <img src="./src/certificates/AZ-900 Certificate.png" alt="Java language skill" class="tech-stack-logo" />
-              <span class="tooltip">Azure Fundamentals-AZ 900</span>
-            </li>
-            </a>
-
-            <a href="./src/certificates/oci.png" target="_blank">
-            <li class="certificate-box" data-aos="fade-up">
-              <img src="./src/certificates/oci.png" alt="c language skill" class="tech-stack-logo" />
-              <span class="tooltip">Oracle Certified Foundations Associate</span>
-            </li>
-            </a>
-
-            <a href="./src/certificates/problem_solving.png" target="_blank">
-            <li class="certificate-box" data-aos="fade-up">
-              <img src="./src/certificates/problem_solving.png" alt="Java language skill" class="tech-stack-logo" />
-              <span class="tooltip">Problem Solving(Basic)</span>
-            </li>
-            </a>
-
-          </ul>
-        </div>
-      </div>
-    </section>
-    <!-- certificates section ends -->
-
-    <section class="projects-section-container" id="projects">
-      <div class="projects-section-div">
-        <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="My projects starts from here">
-            &#60;/Projects&#62;
-          </h2>
-          <p class="sectionHeadingP"></p>
-        </div>
-        <div class="project-boxes-div">
-
-          
-      <!----------------------------->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/project/calculator-logo.png" alt="pexelicon website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Chess-Game</article>
-                <p class="ProjectDescription">
-                  Chess: A Simple Chess game application to play chess with friends..
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/Sourav-Parida/Chess_game" target="_blank" class="github-redirect"
-                    aria-label="Visit calculator on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                  <a href="https://chess-game-k542.onrender.com" target="_blank" class="cta"
-                    aria-label="Visit Chess game Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src=".\src\project\chess.png" alt="Pexelicon website preview image"/>
-              </div>
+            <div class="code-block" data-lang="java">
+              <div><span class="ln">01</span><span class="k">@RestController</span></div>
+              <div><span class="ln">02</span><span class="k">public</span> <span class="k">class</span> <span class="f">InsightsController</span> {</div>
+              <div><span class="ln">03</span>&nbsp;&nbsp;<span class="k">@GetMapping</span>("/api/insights")</div>
+              <div><span class="ln">04</span>&nbsp;&nbsp;<span class="k">public</span> <span class="f">ResponseEntity</span>&lt;<span class="f">List</span>&gt; getInsights() {</div>
+              <div><span class="ln">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">var</span> data = <span class="f">pipelineService</span>.run();</div>
+              <div><span class="ln">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="f">ResponseEntity</span>.ok(data);</div>
+              <div><span class="ln">07</span>&nbsp;&nbsp;}</div>
+              <div><span class="ln">08</span>}</div>
             </div>
           </div>
-
-<!------------------------------------------->
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/project/application.png" alt="pexelicon website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Class-Management</article>
-                <p class="ProjectDescription">
-                  A Java Swing Application to manage student details in the database.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/Sourav-Parida/Java-JDBC_Project" target="_blank" class="github-redirect"
-                    aria-label="Visit calculator on GitHub">
-                    <img src="src/svg/github.svg" alt="github redirect button" />
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/project/Java_project.png" alt="Pexelicon website preview image" />
-              </div>
-            </div>
-          </div>
-      <!-- ---------------------- -->
-
-      <div data-aos="fade-up" class="project-box-wrapper">
-        <div class="project-box project-box2" id="project-box2">
-          <div class="info-div">
-            <img src="src/project/calculator-logo.png" alt="pexelicon website favicon" class="faviconforProject" />
-            <article class="ProjectHeading">Calculator</article>
-            <p class="ProjectDescription">
-              Calculator: A Simple Web-based calculator made with html,css and Js.
-            </p>
-            <div class="project-buttons">
-              <a href="https://github.com/Sourav-Parida/Web-Dev_Calculator" target="_blank" class="github-redirect"
-                aria-label="Visit calculator on GitHub">
-                <img src="src/svg/github.svg" alt="github redirect button" />
-              </a>
-              <a href="https://sourav-parida.github.io/Web-Dev_Calculator/" target="_blank" class="cta"
-                aria-label="Visit calculator Live">
-                <span>Live view</span>
-                <svg viewBox="0 0 13 10" height="10px" width="15px">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="image-div">
-            <img src="src/project/calculator.png" alt="Pexelicon website preview image" />
-
+          <div class="code-mock-term">
+            <span>&gt; pipeline ready · deploy when green</span><span class="caret"></span>
           </div>
         </div>
-      </div>
-  <!-- ---------------------- -->
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- main ends here -->
-
-  <footer id="footer">
-    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
-    </button>
-    <div class="footer-background">
-      <div class="footer-blob"></div>
-    </div>
-    <div class="footer-foreground">
-      <div class="footercontainer">
-        <div class="social-media-container">
-          <div class="getintouch-heading">
-            <article>GetinTouch();</article>
-          </div>
-          <div class="logos">
-            <a href="https://www.instagram.com/pexel_ui/" target="_blank" tabindex="0"
-              aria-label="leetcode">
-              <svg xmlns="http://www.w3.org/2000/svg" class="SocialHandle" viewBox="0 0 24 24">
-                <path d="M13.483 0a1.37 1.37 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.3 5.3 0 0 0-1.209 2.104a5 5 0 0 0-.125.513a5.5 5.5 0 0 0 .062 2.362a6 6 0 0 0 .349 1.017a5.9 5.9 0 0 0 1.271 1.818l4.277 4.193l.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.38 1.38 0 0 0-1.951-.003l-2.396 2.392a3.02 3.02 0 0 1-4.205.038l-.02-.019l-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.7 2.7 0 0 1 .066-.523a2.55 2.55 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0m-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382a1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382a1.38 1.38 0 0 0-1.38-1.382z"></path></svg>
-            </a>
-
-            <a href="https://www.linkedin.com/in/sourav-kumar-parida/" target="_blank"
-              aria-label="My Linkdin"><svg class="SocialHandle" viewBox="0 0 448 512">
-                <path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-              </svg></a>
-
-            <a href="https://github.com/Sourav-Parida" target="_blank" aria-label="My github"><svg viewBox="0 0 496 512"
-                class="SocialHandle">
-                <path
-                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-              </svg></a>
-
-            <a href="mailto:souravparida170@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
-                viewBox="0 0 512 512">
-                <path
-                  d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
-              </svg></a>
-          </div>
-        </div>
-        <div class="two-words">
-          <article tabindex="0" aria-label="Learning, Living, and Leveling Up, my quote">
-            "Learning, Living, and Leveling Up."
-          </article>
-        </div>
-        <div class="footer-bottom">
-          <article>
-            Built by: Sourav Kumar Parida
-            &#169; 2024
-          </article>
+        <div class="code-mock-badges">
+          <span>Backend</span><span>ML</span><span>Cloud</span><span>Data</span>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- footer ends here -->
+  </section>
 
-  <script src="main.js"></script>
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">01</span> About</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/AboutMe&gt;</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a B.Tech Computer Science Engineering student at KIIT, and a Java backend developer focused on cloud-native systems,
+            data engineering and applied ML. I specialize in building reliable services, ETL pipelines and scalable model deployments.
+          </p>
+          <p>
+            My primary languages are Java and Python. I work extensively with cloud data platforms (Azure), Databricks and orchestration
+            tools to move data from raw sources to production insights.
+          </p>
+          <p>
+            I worked on EEG-based mental-state modelling during an internship at Samsung PRISM. I care about writing software that is
+            correct, observable and reproducible.
+          </p>
+        </div>
+        <div class="dp about-visual">
+          <img src="assets/about-profile.jpeg" alt="Sourav Kumar Parida profile artwork" />
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">02</span> Skills</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Skills&gt;</h2>
+      <p class="section-sub">From the interface a user touches to the pipeline that feeds it - grouped by where each skill sits in that chain.</p>
 
-  
+      <div class="skills-showcase">
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <span class="skill-group-tag">Core</span>
+            <h3>Languages</h3>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card"><img src="assets/tech-logos/java.png" alt="Java"><div><h4>Java</h4><small>Language</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/python.png" alt="Python"><div><h4>Python</h4><small>Language</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/clogo.png" alt="C"><div><h4>C</h4><small>Language</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/cpplogo.png" alt="C++"><div><h4>C++</h4><small>Language</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/console.png" alt="Linux"><div><h4>Linux</h4><small>OS</small></div></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <span class="skill-group-tag">Build</span>
+            <h3>Build & Cloud</h3>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card"><img src="assets/tech-logos/spring-boot.png" alt="Spring Boot"><div><h4>Spring Boot</h4><small>Backend</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/azure.png" alt="Azure"><div><h4>Azure</h4><small>Cloud</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/aws.png" alt="AWS"><div><h4>AWS</h4><small>Cloud</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/gitlogo.png" alt="Git"><div><h4>Git</h4><small>Versioning</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/githublogo.png" alt="GitHub"><div><h4>GitHub</h4><small>Collaboration</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/htmllogo.png" alt="HTML"><div><h4>HTML</h4><small>Web</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/csslogo.png" alt="CSS"><div><h4>CSS</h4><small>Web</small></div></div>
+</div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <span class="skill-group-tag">AI</span>
+            <h3>AI / ML & Big Data</h3>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card"><img src="assets/tech-logos/apache-spark.png" alt="Apache Spark"><div><h4>Spark</h4><small>Big data</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/databricks.png" alt="Databricks"><div><h4>Databricks</h4><small>Lakehouse</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/azure-sql-server.png" alt="Azure SQL Server"><div><h4>SQL Server</h4><small>Enterprise</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/azure-data-factory.png" alt="Azure Data Factory"><div><h4>ADF</h4><small>Workflow</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/snowflake-color.png" alt="Snowflake"><div><h4>Snowflake</h4><small>Warehouse</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/jupyter.png" alt="Jupyter"><div><h4>Jupyter</h4><small>Notebook</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/tensorflow.png" alt="TensorFlow"><div><h4>TensorFlow</h4><small>ML</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/pytorch.png" alt="PyTorch"><div><h4>PyTorch</h4><small>ML</small></div></div>
+            </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-head">
+            <span class="skill-group-tag">Storage</span>
+            <h3>Databases</h3>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card"><img src="assets/tech-logos/mysql.png" alt="MySQL"><div><h4>MySQL</h4><small>RDBMS</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/oracle.png" alt="Oracle"><div><h4>Oracle</h4><small>DB</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/mongodb.png" alt="MongoDB"><div><h4>MongoDB</h4><small>NoSQL</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/neo4j.png" alt="Neo4j"><div><h4>Neo4j</h4><small>Graph</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/azure-sql-server.png" alt="Azure SQL Server"><div><h4>SQL Server</h4><small>Enterprise</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/redis.png" alt="Redis"><div><h4>Redis</h4><small>Caching</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS (featured) ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">03</span> Projects</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Projects&gt;</h2>
+      <p class="section-sub">Three projects across the stack - full applications, data pipelines and applied ML. The full list is filterable by technology.</p>
+
+      <div class="project-grid">
+
+        <div class="card-project">
+          <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">FULL-STACK</span></div>
+          <h3>Staybnb</h3>
+          <p class="desc">Full-stack property rental platform with listing search, booking flow and host management.</p>
+          <p class="metric">↳ REST API + relational schema for bookings & listings</p>
+          <div class="stack-row">
+            <span class="stack-pill">Java</span><span class="stack-pill">Spring Boot</span>
+            <span class="stack-pill">Angular</span><span class="stack-pill">MySQL</span>
+          </div>
+          <div class="card-links">
+            <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a> -->
+          </div>
+        </div>
+
+        <div class="card-project">
+          <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">ML / RESEARCH</span></div>
+          <h3>NeuroAdaptive AI</h3>
+          <p class="desc">EEG-based multi-task mental-state prediction and forecasting, combining CNN, BiLSTM and Transformer architectures.</p>
+          <p class="metric">↳ multi-task prediction + forecasting from raw EEG</p>
+          <div class="stack-row">
+            <span class="stack-pill">Python</span><span class="stack-pill">PyTorch</span>
+            <span class="stack-pill">CNN</span><span class="stack-pill">BiLSTM</span><span class="stack-pill">Transformer</span>
+          </div>
+          <div class="card-links">
+            <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-circle-info"></i> Details</a> -->
+          </div>
+        </div>
+
+        <div class="card-project">
+          <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">DATA ENGINEERING</span></div>
+          <h3>Amazon Prime ETL Pipeline</h3>
+          <p class="desc">End-to-end Azure data engineering pipeline - ingestion to dashboard - using ADLS Gen2, Databricks and Delta Lake.</p>
+          <p class="metric">↳ raw → curated → Power BI, fully orchestrated on ADF</p>
+          <div class="stack-row">
+            <span class="stack-pill">ADLS Gen2</span><span class="stack-pill">Databricks</span>
+            <span class="stack-pill">Delta Lake</span><span class="stack-pill">ADF</span><span class="stack-pill">Power BI</span>
+          </div>
+          <div class="card-links">
+            <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
+            <!-- <a href="#"><i class="fa-solid fa-circle-info"></i> Details</a> -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-footer-link">
+        <a href="projects.html" class="btn btn-ghost">Show all projects <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">04</span> Experience</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Experience&gt;</h2>
+      <p class="section-sub">Internships, chronologically - each links to certificates and reference material where available.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img src="assets/logos/infosys.png" alt="Infosys" class="org-logo" />
+                <div>
+                  <h3>Systems Engineer Intern (Wintership)</h3>
+                  <div class="timeline-org">Infosys</div>
+                </div>
+              </div>
+              <div class="timeline-date mono">DEC 2025 - MAY 2026</div>
+            </div>
+            <ul>
+              <li>Completed foundational training in Java and DBMS, followed by specialized internship experience in Big Data technologies.</li>
+              <li>Worked with PySpark, MongoDB, Hadoop (HDFS, YARN, MapReduce), Advanced MySQL, and Power BI with DAX for large-scale processing and analytics.</li>
+              <li>Developed a Python-based Student Answer Script Evaluation Tool to automate the evaluation of Neo4j Cypher queries and validate correctness.</li>
+            </ul>
+            <div class="stack-row">
+              <span class="stack-pill">Java</span><span class="stack-pill">Python</span><span class="stack-pill">PySpark</span><span class="stack-pill">MongoDB</span><span class="stack-pill">Unix</span>
+            </div>
+            <div class="timeline-links">
+              <a href="https://www.linkedin.com/posts/sourav-kumar-parida_infosys-internship-bigdata-ugcPost-7463976819088670720-hWvk" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-card">
+            <div class="timeline-top">
+              <div style="display:flex;align-items:center;gap:12px;">
+                <img src="assets/logos/samsung.png" alt="Samsung" class="org-logo" />
+                <div>
+                  <h3>Research Intern</h3>
+                  <div class="timeline-org">Samsung PRISM</div>
+                </div>
+              </div>
+              <div class="timeline-date mono">JUN 2024 - OCT 2024</div>
+            </div>
+            <ul>
+              <li>Co-authored a research paper titled “A Pixel-Mapping Based Fast Image Rotation Algorithm”, accepted at ICVGIP 2025 under Samsung PRISM.</li>
+              <li>Developed a single-pass parallel image rotation algorithm that achieved up to 30% faster performance than OpenCV WarpAffine for high-resolution images.</li>
+              <li>Received a Certificate of Excellence from Samsung R&D Institute Bangalore for outstanding research contribution.</li>
+            </ul>
+            <div class="stack-row">
+              <span class="stack-pill">Image Processing</span><span class="stack-pill">OpenCV</span>
+            </div>
+            <div class="timeline-links">
+              <a href="https://www.linkedin.com/posts/sourav-kumar-parida_samsungprism-innovation-teamwork-activity-7272913331802238978-_BmX" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS (preview) ============ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">05</span> Certifications</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Certifications&gt;</h2>
+      <p class="section-sub">A quick look - the full page groups every certificate by issuing company with filters.</p>
+
+      <div class="cert-grid">
+        <div class="cert-badge" data-tags="microsoft" data-cert-img="assets/cert-badges/AZ900.png">
+          <div class="cert-top">
+            <div class="cert-logo-wrap">
+              <img src="assets/tech-logos/azure.png" alt="Azure logo" class="cert-logo">
+            </div>
+            <span class="cert-cat mono">CLOUD</span>
+          </div>
+          <div class="cert-title">Microsoft Azure Fundamentals</div>
+          <div class="cert-code">AZ-900</div>
+          <div class="cert-meta">
+            <div class="cert-issuer">Microsoft</div>
+            <div class="cert-dates">Issued: 2025  ;  Valid: 2028</div>
+          </div>
+          <div class="cert-actions">
+            <a href="certifications.html#azure-900" target="_blank" rel="noopener" class="verify">Verify credential →</a>
+            <button class="show-badge">Show badge</button>
+            <a class="cert-link-btn" href="certifications.html#azure-900" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-badge" data-tags="oracle" data-cert-img="assets/cert-badges/OCI25FNDCFA.png">
+          <div class="cert-top">
+            <div class="cert-logo-wrap">
+              <img src="assets/tech-logos/oracle.png" alt="Oracle logo" class="cert-logo">
+            </div>
+            <span class="cert-cat mono">CLOUD</span>
+          </div>
+          <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified Foundations Associate</div>
+          <div class="cert-code">OCI25FNDCFA</div>
+          <div class="cert-meta">
+            <div class="cert-issuer">Oracle</div>
+            <div class="cert-dates">Issued: 2025  ;  Valid: 2027</div>
+          </div>
+          <div class="cert-actions">
+            <a href="certifications.html" target="_blank" rel="noopener" class="verify">Verify credential →</a>
+            <button class="show-badge">Show badge</button>
+            <a class="cert-link-btn" href="certifications.html" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </div>
+
+        <div class="cert-badge" data-tags="oracle" data-cert-img="assets/cert-badges/OCI25AICFA.png">
+          <div class="cert-top">
+            <div class="cert-logo-wrap">
+              <img src="assets/tech-logos/oracle.png" alt="Oracle logo" class="cert-logo">
+            </div>
+            <span class="cert-cat mono">AI</span>
+          </div>
+          <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</div>
+          <div class="cert-code">OCI25AICFA</div>
+          <div class="cert-meta"><div class="cert-issuer">Oracle</div><div class="cert-dates">Issued: 2025  ;  Valid: 2027</div></div>
+          <div class="cert-actions">
+            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=89F9FE752FB21A9AEDBEF58B39144227CFD22071C28E2FA9DED60D707F685530" target="_blank" rel="noopener" class="verify">Verify credential →</a>
+            <button class="show-badge">Show badge</button>
+            <a class="cert-link-btn" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=89F9FE752FB21A9AEDBEF58B39144227CFD22071C28E2FA9DED60D707F685530" target="_blank" rel="noopener">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-footer-link">
+        <a href="certifications.html" class="btn btn-ghost">Show all certificates <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEARCH ============ -->
+  <section class="section" id="research">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">06</span> Research</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Research&gt;</h2>
+      <p class="section-sub">Work done as part of my research internship and academic research track.</p>
+
+      <div class="research-list">
+        <div class="research-card">
+          <div class="research-year">2025<span>ICVGIP</span></div>
+          <div>
+            <h3>A Pixel-Mapping Based Fast Image Rotation Algorithm</h3>
+            <p class="research-venue mono">IIT Mandi · ICVGIP 2025</p>
+            <p>
+              Co-authored this paper during my internship at Samsung R&amp;D Institute Bangalore. We designed a fast image rotation approach that reduces computational overhead in certain rotation cases while achieving performance close to built-in libraries.
+            </p>
+            <p>
+              Published in <strong>ICVGIP '25: Proceedings of the Sixteen Indian Conference on Computer Vision, Graphics and Image Processing</strong> by the <strong>Association for Computing Machinery</strong>, New York, NY, United States, on <strong>31 July 2026</strong>.
+            </p>
+            <div class="research-meta">
+              <div class="stack-row">
+                <span class="stack-pill">Computer Vision</span>
+                <span class="stack-pill">OpenCV</span>
+                <span class="stack-pill">Image Processing</span>
+              </div>
+              <div class="research-links">
+                <a href="https://dl.acm.org/doi/10.1145/3774521.3774541" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> Paper</a>
+                <a href="https://lnkd.in/p/dZ3SrBkx" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-link"></i>About Publication</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENTS ============ -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <!-- <div class="eyebrow"><span class="idx">07</span> Achievements</div> -->
+      <h2 class="section-title section-title-legacy">&lt;/Achievements&gt;</h2>
+      <div class="ach-grid">
+        <div class="ach-card reveal">
+          <span class="ach-num">4th</span>
+          <h4>HackVega Hackathon</h4>
+          <p>National Hackathon By HirePro</p>
+        </div>
+        <div class="ach-card reveal">
+          <span class="ach-num">★</span>
+          <h4>Samsung PRISM Certificate of Excellence</h4>
+          <p>Research Internship</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cert-modal" id="certModal" aria-hidden="true">
+  <div class="cert-modal-content" role="dialog" aria-modal="true" aria-label="Certificate preview">
+    <button class="cert-modal-close" aria-label="Close certificate preview">×</button>
+    <img class="cert-modal-img" src="" alt="Certificate preview" />
+    <div class="cert-modal-caption" style="display:none;"></div>
+  </div>
+</div>
+
+<footer class="site-footer" id="contact" data-nav-target="contact">
+  <div class="footer-glow footer-glow-one"></div>
+  <div class="footer-glow footer-glow-two"></div>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <!-- <div class="eyebrow footer-eyebrow"><span class="idx">08</span> Connect</div> -->
+      <h2 class="contact-legacy-heading footer-heading-title">GetInTouch();</h2>
+      <p>Open to backend, data engineering, cloud systems, and AI/ML collaborations.</p>
+    </div>
+
+    <div class="footer-cards contact-grid">
+      <button type="button" class="mini-card contact-card copy-email-btn" data-email="souravparida170@gmail.com" aria-label="Copy email address">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Gmail</span>
+        <small class="copy-email-tip">souravparida170@gmail.com</small>
+      </button>
+      <a class="mini-card contact-card" href="https://www.linkedin.com/in/sourav-kumar-parida/" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a class="mini-card contact-card" href="https://github.com/Sourav-Parida" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+        <span>GitHub</span>
+      </a>
+      <a class="mini-card contact-card" href="https://leetcode.com/u/sourav-parida/" target="_blank" rel="noopener">
+        <i class="fa-solid fa-code"></i>
+        <span>LeetCode</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © <span class="js-year"></span> Sourav Kumar Parida — built with HTML, CSS , JS & Github-Copilot.
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
-
 </html>

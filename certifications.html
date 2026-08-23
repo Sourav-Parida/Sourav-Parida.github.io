@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Certifications - Sourav Kumar Parida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html#home" class="nav-brand"><span class="dot"></span>Sourav Kumar Parida</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="certifications.html" class="active">Certifications</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#achievements">Achievements</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <div class="sound-control">
+        <button class="icon-btn" id="soundToggle" aria-label="Sound settings" aria-expanded="false">
+          <i class="fa-solid fa-volume-xmark" id="soundIcon"></i>
+        </button>
+        <div class="sound-panel" id="soundPanel">
+          <div class="sound-panel-row">
+            <span>Ambient sound</span>
+            <button class="mute-btn" id="muteBtn">Unmute</button>
+          </div>
+          <div class="volume-row">
+            <label for="volumeSlider">Volume</label>
+            <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.7" aria-label="Music volume">
+          </div>
+          <ul class="track-list" id="trackList">
+            <li data-track="assets/audio/f1.mp3" class="active">f1</li>
+            <li data-track="assets/audio/oppenheimer.mp3">oppenheimer</li>
+            <li data-track="assets/audio/interstellar.mp3">interstellar</li>
+          </ul>
+        </div>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light / dark mode">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    </div>
+  </div>
+</nav>
+<audio id="bgAudio" loop preload="none">
+  <source src="assets/audio/lofi-focus.mp3" type="audio/mpeg">
+</audio>
+
+<main>
+  <div class="container page-header">
+    <a href="index.html#certifications" class="back-link"><i class="fa-solid fa-arrow-left"></i> back to home</a>
+    <!-- <div class="eyebrow"><span class="idx">07</span> Certifications</div> -->
+    <h1 class="section-title">All Certificates</h1>
+    <p class="section-sub">Every certification and internship credential, filterable by issuing organization.</p>
+
+    <div class="cert-filter-row" data-filter-group=".cert-grid .cert-badge" data-empty-target="#no-certs">
+      <button class="project-tab active" data-filter="all">All</button>
+      <button class="project-tab" data-filter="microsoft">Microsoft</button>
+      <button class="project-tab" data-filter="aws">AWS</button>
+      <button class="project-tab" data-filter="oracle">Oracle</button>
+      <button class="project-tab" data-filter="samsung">Cisco</button>
+      <button class="project-tab" data-filter="infosys">Anthropic</button>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-badge" data-tags="microsoft" id="azure-900" data-cert-img="assets/cert-badges/AZ900.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/azure.png" alt="Azure logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">CLOUD</span>
+        </div>
+        <div class="cert-title">Microsoft Azure Fundamentals</div>
+        <div class="cert-code">AZ-900</div>
+        <div class="cert-meta"><div class="cert-issuer">Microsoft</div><div class="cert-dates">Issued: 2025 · Valid: 2025 — 2028</div></div>
+        <div class="cert-actions"><a href="#" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="#" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+      <div class="cert-badge" data-tags="oracle" data-cert-img="assets/cert-badges/OCI25FNDCFA.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/oracle.png" alt="Oracle logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">CLOUD</span>
+        </div>
+        <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified Foundations Associate</div>
+        <div class="cert-code">OCI25FNDCFA</div>
+        <div class="cert-meta"><div class="cert-issuer">Oracle</div><div class="cert-dates">Issued: 2025  ;  Valid: 2028</div></div>
+        <div class="cert-actions"><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=BDE2033C9B9EE9E1A6485A6C45E99EE4D5E32E93A6C381BE2344118B2BA192D6" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=BDE2033C9B9EE9E1A6485A6C45E99EE4D5E32E93A6C381BE2344118B2BA192D6" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+      <div class="cert-badge" data-tags="oracle" data-cert-img="assets/cert-badges/OCI25AICFA.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/oracle.png" alt="Oracle logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">AI</span>
+        </div>
+        <div class="cert-title">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</div>
+        <div class="cert-code">OCI25AICFA</div>
+        <div class="cert-meta"><div class="cert-issuer">Oracle</div><div class="cert-dates">Issued: 2025  ;  Valid: 2027</div></div>
+        <div class="cert-actions"><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=89F9FE752FB21A9AEDBEF58B39144227CFD22071C28E2FA9DED60D707F685530" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=89F9FE752FB21A9AEDBEF58B39144227CFD22071C28E2FA9DED60D707F685530" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+      <div class="cert-badge" data-tags="oracle" data-cert-img="assets/cert-badges/OCIF2023CA.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/oracle.png" alt="Oracle logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">CLOUD</span>
+        </div>
+        <div class="cert-title">Oracle Cloud Infrastructure 2023 Certified Foundations Associate</div>
+        <div class="cert-code">OCI23FNDCFA</div>
+        <div class="cert-meta"><div class="cert-issuer">Oracle</div><div class="cert-dates">Issued: 2023  ;  Valid: 2026</div></div>
+        <div class="cert-actions"><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=622DC749C2B5CE726B75C944DC8339D40C21AA428CD55FDBF84BFE7E5CD83755" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=622DC749C2B5CE726B75C944DC8339D40C21AA428CD55FDBF84BFE7E5CD83755" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+
+      <!-- 
+      <div class="cert-badge" data-tags="aws" data-cert-img="assets/tech-logos/aws.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/aws.png" alt="AWS logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">CLOUD</span>
+        </div>
+        <div class="cert-title">AWS Cloud Fundamentals</div>
+        <div class="cert-code">AWS-CLD-01</div>
+        <div class="cert-meta"><div class="cert-issuer">Amazon Web Services</div><div class="cert-dates">Issued: 2024  ;  Valid: 2026</div></div>
+        <div class="cert-actions"><a href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://aws.amazon.com/certification/certified-cloud-practitioner/" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+      <div class="cert-badge" data-tags="aws" data-cert-img="assets/tech-logos/aws.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/aws.png" alt="AWS Data logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">DATA</span>
+        </div>
+        <div class="cert-title">AWS Data Engineering</div>
+        <div class="cert-code">AWS-DATA-01</div>
+        <div class="cert-meta"><div class="cert-issuer">Amazon Web Services</div><div class="cert-dates">Issued: 2024  ;  Valid: 2026</div></div>
+        <div class="cert-actions"><a href="https://aws.amazon.com/certification/certified-data-engineer/" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://aws.amazon.com/certification/certified-data-engineer/" target="_blank" rel="noopener">View Certificate</a></div>
+      </div>
+
+      <div class="cert-badge" data-tags="microsoft" data-cert-img="assets/cert-badges/AZ900.png">
+        <div class="cert-top">
+          <div class="cert-logo-wrap">
+            <img src="assets/tech-logos/azure.png" alt="Azure Data logo" class="cert-logo">
+          </div>
+          <span class="cert-cat mono">DATA</span>
+        </div>
+        <div class="cert-title">Azure Data Fundamentals — DP-900</div>
+        <div class="cert-code">DP-900</div>
+        <div class="cert-meta"><div class="cert-issuer">Microsoft</div><div class="cert-dates">Issued: 2025  ;  Valid: 2028</div></div>
+        <div class="cert-actions"><a href="https://learn.microsoft.com/en-us/certifications/exam-detail/dp-900/" target="_blank" rel="noopener" class="verify">Verify credential →</a><button class="show-badge">Show badge</button><a class="cert-link-btn" href="https://learn.microsoft.com/en-us/certifications/exam-detail/dp-900/" target="_blank" rel="noopener">View Certificate</a></div>
+      </div> 
+      -->
+
+    </div>
+
+    <div id="no-certs" class="empty-state" style="display:none; margin-top:24px;">
+      No certificates match this filter yet.
+    </div>
+  </div>
+</main>
+
+<!-- Certificate preview modal -->
+<div id="certModal" class="cert-modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="cert-modal-content">
+    <button class="cert-modal-close" aria-label="Close certificate">×</button>
+    <img src="" alt="Certificate preview" class="cert-modal-img">
+    <div class="cert-modal-caption" style="display:none;"></div>
+  </div>
+</div>
+
+<footer class="footer">© <span class="js-year"></span> Sourav Kumar Parida — built with HTML, CSS , JS & Github-Copilot.</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
