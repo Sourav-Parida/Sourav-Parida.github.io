@@ -8,57 +8,55 @@
 
 :root {
   /* --- color tokens --- */
-  --bg: #0B0F14;
-  --bg-raised: #111823;
-  --surface: #141C28;
-  --surface-hover: #182233;
-  --border: #223041;
-  --border-soft: #1A2432;
+  /* --bg: #0d1117; */
+  --bg: #090912;
+  --bg-raised: #161b22;
+  --surface: #161b22;
+  --surface-hover: #21262d;
+  --border: #30363d;
+  --border-soft: #21262d;
 
-  --text: #E7EDF3;
-  --text-muted: #8FA0B3;
-  --text-dim: #5C6C80;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --text-dim: #6e7681;
 
-  --signal: #2B7AF6;
+  --signal: #58a6ff;
   /* blue — signature accent */
-  --signal-dim: #1859C6;
-  --amber: #F5A93F;
+  --signal-dim: #388bfd;
+  --amber: #d29922;
   /* amber — research / highlight */
-  --amber-dim: #7A5B26;
-  --violet: #9C8CF5;
+  --amber-dim: #6e5a1e;
+  --violet: #bc8cff;
   /* used sparingly for ML/research accents */
 
   --success: #2B7AF6;
-  --grid-line: rgba(43, 122, 246, 0.04);
+  --grid-line: rgba(139, 148, 158, 0.035);
 
   --transition-theme: background .25s ease, color .25s ease, border-color .25s ease;
 }
 
 /* ---------- LIGHT THEME ---------- */
 html[data-theme="light"] {
-  --bg: #FFFDF2;
-  /* warm, light yellow */
-  --bg-raised: #FFF9E6;
-  /* slightly deeper for raised surfaces */
-  --surface: #FFFDF7;
-  /* skill / card white that's not pure white */
-  --surface-hover: #FFF4D9;
-  --border: #F0E6C9;
-  --border-soft: #F5EFE0;
+  --bg: #dfe7f3;
+  --bg-raised: rgba(255, 255, 255, 0.78);
+  --surface: rgba(255, 255, 255, 0.64);
+  --surface-hover: rgba(255, 255, 255, 0.88);
+  --border: rgba(116, 137, 158, 0.28);
+  --border-soft: rgba(137, 155, 174, 0.2);
 
-  --text: #101820;
-  --text-muted: #0a0d10;
-  --text-dim: #7C8CA0;
+  --text: #111111;
+  --text-muted: #252525;
+  --text-dim: #555555;
+  --heading: #5b456f;
 
-  --signal: #2B7AF6;
-  /* blue signature */
-  --signal-dim: #BFD9FF;
-  --amber: #C97B0F;
-  --amber-dim: #F5DFB8;
-  --violet: #6E5AD1;
+  --signal: #1677d2;
+  --signal-dim: #9db8d0;
+  --amber: #b66b18;
+  --amber-dim: #e8c48c;
+  --violet: #6556c7;
 
-  --grid-line: rgba(43, 122, 246, 0.03);
-  --shadow-card: 0 8px 24px rgba(16, 24, 32, 0.06);
+  --grid-line: rgba(106, 128, 149, 0.07);
+  --shadow-card: 0 18px 42px rgba(52, 67, 82, 0.12);
 }
 
 html[data-theme="light"] .btn-primary {
@@ -71,6 +69,213 @@ html[data-theme="light"] .rail-node {
 
 html[data-theme="light"] .timeline-item::before {
   background: var(--bg);
+}
+
+html[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(210, 225, 236, 0.42), transparent 30%),
+    radial-gradient(circle at 92% 22%, rgba(224, 216, 232, 0.34), transparent 28%),
+    radial-gradient(circle at 55% 88%, rgba(210, 231, 225, 0.26), transparent 32%),
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0/48px 48px,
+    var(--bg);
+}
+
+html[data-theme="light"] .nav {
+  background: rgba(248, 250, 252, 0.76);
+  border-bottom-color: rgba(116, 137, 158, 0.22);
+  box-shadow: 0 8px 28px rgba(52, 67, 82, 0.08);
+}
+
+html[data-theme="light"] .section-title,
+html[data-theme="light"] .section-title-legacy,
+html[data-theme="light"] .contact-legacy-heading {
+  color: var(--heading);
+}
+
+html[data-theme="light"] .section-title-legacy,
+html[data-theme="light"] .contact-legacy-heading {
+  background: linear-gradient(90deg, #3227a7, #9a586c, #a63f3f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+html[data-theme="light"] .nav-links a {
+  color: var(--text-muted);
+}
+
+html[data-theme="light"] .nav-links a:hover,
+html[data-theme="light"] .nav-links a.active {
+  color: var(--signal);
+  background: rgba(255, 255, 255, 0.46);
+}
+
+html[data-theme="light"] .nav-brand .dot {
+  box-shadow: 0 0 0 4px rgba(22, 119, 210, 0.14);
+}
+
+html[data-theme="light"] .skill-group,
+html[data-theme="light"] .skill-card,
+html[data-theme="light"] .card-project,
+html[data-theme="light"] .research-card,
+html[data-theme="light"] .timeline-card,
+html[data-theme="light"] .ach-card,
+html[data-theme="light"] .cert-badge,
+html[data-theme="light"] .contact-card,
+html[data-theme="light"] .mini-card,
+html[data-theme="light"] .code-mock {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(239, 244, 247, 0.48));
+  border-color: rgba(116, 137, 158, 0.24);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+html[data-theme="light"] .skill-card:hover,
+html[data-theme="light"] .card-project:hover,
+html[data-theme="light"] .research-card:hover,
+html[data-theme="light"] .ach-card:hover,
+html[data-theme="light"] .cert-badge:hover,
+html[data-theme="light"] .contact-card:hover,
+html[data-theme="light"] .mini-card:hover {
+  border-color: rgba(91, 69, 111, 0.42);
+  box-shadow: 0 20px 44px rgba(52, 67, 82, 0.16);
+}
+
+html[data-theme="light"] .skill-card img,
+html[data-theme="light"] .cert-logo,
+html[data-theme="light"] .org-badge,
+html[data-theme="light"] .hero-logo-ltm {
+  background: rgba(255, 255, 255, 0.64);
+  border-color: rgba(99, 157, 219, 0.26);
+}
+
+html[data-theme="light"] .btn-primary,
+html[data-theme="light"] .project-tab.active,
+html[data-theme="light"] .cert-link-btn {
+  background: linear-gradient(135deg, #1677d2, #4b9fea);
+  border-color: #1677d2;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(22, 119, 210, 0.2);
+}
+
+html[data-theme="light"] .btn-primary:hover {
+  background: linear-gradient(135deg, #0f67bd, #368bd9);
+}
+
+html[data-theme="light"] .btn-ghost,
+html[data-theme="light"] .project-tab,
+html[data-theme="light"] .icon-btn,
+html[data-theme="light"] .mute-btn,
+html[data-theme="light"] .timeline-links a,
+html[data-theme="light"] .cert-actions .show-badge {
+  background: rgba(255, 255, 255, 0.5);
+  border-color: rgba(99, 157, 219, 0.32);
+}
+
+html[data-theme="light"] .sound-panel {
+  background: rgba(248, 250, 252, 0.88);
+  border-color: rgba(116, 137, 158, 0.26);
+  box-shadow: 0 18px 42px rgba(52, 67, 82, 0.16);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+html[data-theme="light"] .code-mock-term {
+  background: rgba(225, 241, 255, 0.72);
+}
+
+html[data-theme="light"] .cert-modal {
+  background: rgba(28, 72, 112, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+html[data-theme="light"] .cert-modal-content {
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(116, 137, 158, 0.26);
+  box-shadow: 0 24px 60px rgba(52, 67, 82, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+html[data-theme="light"] .site-footer {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(216, 205, 226, 0.28), transparent 32%),
+    linear-gradient(180deg, rgba(239, 243, 247, 0.84), rgba(222, 231, 237, 0.94));
+  border-top-color: rgba(116, 137, 158, 0.24);
+}
+
+html[data-theme="light"] .hero-name {
+  color: #10a2a3;
+
+}
+
+html[data-theme="light"] .hero-name:hover {
+  color: #244bf1;
+}
+
+html[data-theme="dark"] .nav {
+  background: rgba(13, 17, 23, 0.94);
+  border-bottom-color: #30363d;
+  box-shadow: 0 8px 28px rgba(1, 4, 9, 0.32);
+}
+
+html[data-theme="dark"] .skill-group,
+html[data-theme="dark"] .skill-card,
+html[data-theme="dark"] .card-project,
+html[data-theme="dark"] .research-card,
+html[data-theme="dark"] .timeline-card,
+html[data-theme="dark"] .ach-card,
+html[data-theme="dark"] .cert-badge,
+html[data-theme="dark"] .contact-card,
+html[data-theme="dark"] .mini-card,
+html[data-theme="dark"] .code-mock {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    #161b22;
+  border-color: #30363d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 18px 42px rgba(1, 4, 9, 0.28);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+html[data-theme="dark"] .skill-card:hover,
+html[data-theme="dark"] .card-project:hover,
+html[data-theme="dark"] .research-card:hover,
+html[data-theme="dark"] .ach-card:hover,
+html[data-theme="dark"] .cert-badge:hover,
+html[data-theme="dark"] .contact-card:hover,
+html[data-theme="dark"] .mini-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 20px 44px rgba(1, 4, 9, 0.4);
+}
+
+html[data-theme="dark"] .sound-panel,
+html[data-theme="dark"] .cert-modal-content {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+    #161b22;
+  border-color: #30363d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 20px 48px rgba(1, 4, 9, 0.5);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+html[data-theme="dark"] .cert-modal {
+  background: rgba(0, 0, 0, 0.56);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+html[data-theme="dark"] .site-footer {
+  background: linear-gradient(180deg, #161b22, #0d1117);
+  border-top-color: #30363d;
 }
 
 body,
@@ -286,7 +491,7 @@ textarea,
   left: 0;
   right: 0;
   z-index: 200;
-  background: rgba(11, 15, 20, 0.82);
+  background: rgba(13, 14, 16, 0.88);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-soft);
 }
@@ -498,7 +703,7 @@ textarea,
 }
 
 .hero-role:hover {
-  color: #2caed2;
+  color: #4f0e85;
 }
 
 .hero-desc {
@@ -606,14 +811,14 @@ textarea,
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid rgba(122, 226, 255, 0.16);
-  box-shadow: 0 18px 36px rgba(8, 17, 28, 0.22);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.26);
   transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
 }
 
 .dp:hover img {
   transform: translateY(-5px) scale(1.02);
   border-color: rgba(126, 229, 200, 0.4);
-  box-shadow: 0 24px 46px rgba(8, 17, 28, 0.3);
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.34);
 }
 
 @media (max-width:960px) {
@@ -954,7 +1159,7 @@ textarea,
   border-radius: 24px;
   padding: 30px;
   overflow: hidden;
-  box-shadow: 0 16px 32px rgba(8, 17, 28, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
   transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
 }
 
@@ -1175,7 +1380,7 @@ textarea,
   padding: 24px 22px;
   text-align: left;
   transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-  box-shadow: 0 10px 26px rgba(9, 18, 28, 0.12);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
 }
 
 .ach-card::before {
@@ -1245,7 +1450,7 @@ textarea,
   gap: 10px;
   transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
   position: relative;
-  box-shadow: 0 12px 28px rgba(9, 18, 28, 0.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
 .cert-badge:hover {
@@ -1412,7 +1617,7 @@ textarea,
   width: 480px;
   height: 360px;
   max-width: 92%;
-  box-shadow: 0 20px 40px rgba(12, 24, 48, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
   position: relative;
   display: flex;
   align-items: center;
@@ -1559,7 +1764,7 @@ textarea,
   align-items: center;
   gap: 10px;
   transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease, background .15s ease;
-  box-shadow: 0 12px 24px rgba(9, 18, 28, 0.14);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .contact-card:hover {
@@ -1584,7 +1789,7 @@ textarea,
   position: relative;
   overflow: hidden;
   margin-top: 20px;
-  background: linear-gradient(180deg, rgba(10, 14, 21, 0.94), rgba(6, 10, 17, 1));
+  background: linear-gradient(180deg, rgba(16, 17, 19, 0.96), rgba(9, 10, 12, 1));
   border-top: 1px solid var(--border-soft);
 }
 
@@ -1699,7 +1904,7 @@ html[data-theme="light"] .mini-card {
   left: 50%;
   bottom: calc(100% + 10px);
   transform: translateX(-50%) translateY(4px);
-  background: rgba(11, 15, 20, 0.96);
+  background: rgba(13, 14, 16, 0.98);
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
