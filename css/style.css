@@ -656,7 +656,7 @@ textarea,
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .skill-group-tag {
@@ -701,8 +701,8 @@ textarea,
 }
 
 .skill-card img {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
   border-radius: 10px;
   background: var(--bg-raised);

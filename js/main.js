@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return {
         track: parsed.track || (trackItems[0] ? trackItems[0].dataset.track : ''),
         muted: parsed.muted ?? false,
-        volume: Number.isFinite(savedVolume) ? Math.min(1, Math.max(0, savedVolume)) : 0.7,
+        volume: Number.isFinite(savedVolume) ? Math.min(1, Math.max(0, savedVolume)) : 0.4,
         currentTime: Number(parsed.currentTime) || 0,
         isPlaying: parsed.isPlaying ?? true,
         ownerId: parsed.ownerId || null
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return {
         track: trackItems[0] ? trackItems[0].dataset.track : '',
         muted: false,
-        volume: 0.7,
+        volume: 0.4,
         currentTime: 0,
         isPlaying: true,
         ownerId: null
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const setVolume = (value) => {
     const rawValue = Number(value);
-    const safeValue = Number.isFinite(rawValue) ? Math.min(1, Math.max(0, rawValue)) : 0.7;
+    const safeValue = Number.isFinite(rawValue) ? Math.min(1, Math.max(0, rawValue)) : 0.4;
     const shouldMute = safeValue <= 0;
     if (audio) {
       audio.volume = safeValue;
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOwner = ownerId === pageId;
     const track = incomingState.track || (trackItems[0] ? trackItems[0].dataset.track : '');
     const muted = !!incomingState.muted;
-    const volume = Number.isFinite(Number(incomingState.volume)) ? Math.min(1, Math.max(0, Number(incomingState.volume))) : 0.7;
+    const volume = Number.isFinite(Number(incomingState.volume)) ? Math.min(1, Math.max(0, Number(incomingState.volume))) : 0.4;
     const currentTime = Number(incomingState.currentTime) || 0;
     const shouldPlay = isOwner && !!incomingState.isPlaying && !muted;
 
