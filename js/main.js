@@ -415,7 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- code mock language toggle (Python / Java) ---------- */
+  /* ---------- code mock example tabs (ML / AI / data engineering) ---------- */
   const codeTabs = document.querySelectorAll('.code-tab');
   const codeBlocks = document.querySelectorAll('.code-block');
   const applyCodeLang = (lang) => {
@@ -428,7 +428,10 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('portfolio-code-lang', lang);
   };
   if (codeTabs && codeTabs.length) {
-    const saved = localStorage.getItem('portfolio-code-lang') || 'python';
+    const savedLang = localStorage.getItem('portfolio-code-lang');
+    const saved = Array.from(codeTabs).some(tab => tab.dataset.lang === savedLang)
+      ? savedLang
+      : 'ml';
     applyCodeLang(saved);
     codeTabs.forEach(tab => tab.addEventListener('click', () => applyCodeLang(tab.dataset.lang)));
   }

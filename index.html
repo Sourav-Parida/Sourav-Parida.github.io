@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sourav Kumar Parida - Software Engineering</title>
-<meta name="description" content="Portfolio of a Java backend developer and Computer Science Engineer specializing in cloud, data engineering and ML.">
+<title>Sourav Kumar Parida - AI/ML & Data Engineer</title>
+<meta name="description" content="Portfolio of Sourav Kumar Parida, an AI/ML and data engineer working with Python, Azure, RAG, vector databases, embeddings, AI agents, and data platforms.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -79,12 +79,12 @@
         <div class="hero-kicker"><span class="pulse"></span> available for full-time roles & collaborations</div>
         <h1 class="hero-name">Sourav Kumar Parida</h1>
         <h2 class="hero-role mono">
-          Backend & Data Engineer - Java, Cloud & AI/ML
+          AI/ML Engineer & Data Engineer
         </h2>
         
         <p class="hero-desc">
-          Focused on backend systems, data pipelines and applied machine learning. Skilled in Java and Python,
-          building robust services, scalable ETL pipelines, and ML workflows on cloud platforms.
+          I build AI/ML applications and data pipelines with Python and Azure, working with RAG, embeddings,
+          vector databases, and AI agents.
         </p>
         <div class="hero-actions">
           <a href="https://drive.google.com/file/d/1V8_vzR-EkRgOmvVnxZ4bnPHewKZYtK7k/view?usp=drive_link" class="btn btn-primary" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
@@ -102,32 +102,41 @@
         <div class="code-mock">
           <div class="code-mock-bar">
             <div class="code-mock-dots"><span></span><span></span><span></span></div>
-            <div class="code-mock-tabs" role="tablist" aria-label="Select language">
-              <span class="code-tab on" data-lang="python" role="tab" aria-selected="true">Python</span>
-              <span class="code-tab" data-lang="java" role="tab" aria-selected="false">Java</span>
+            <div class="code-mock-tabs" role="tablist" aria-label="Select code example">
+              <span class="code-tab on" data-lang="ml" role="tab" aria-selected="true">ML</span>
+              <span class="code-tab" data-lang="ai" role="tab" aria-selected="false">AI</span>
+              <span class="code-tab" data-lang="data" role="tab" aria-selected="false">Data Engineering</span>
             </div>
           </div>
           <div class="code-mock-body">
-            <div class="code-block active" data-lang="python">
-              <div><span class="ln">01</span><span class="k">import</span> <span class="f">pandas</span> as <span class="f">pd</span></div>
-              <div><span class="ln">02</span><span class="c"># simple ETL step: read, transform, write</span></div>
-              <div><span class="ln">03</span>def load_data(path):</div>
-              <div><span class="ln">04</span>&nbsp;&nbsp;<span class="k">return</span> pd.read_csv(path)</div>
-              <div><span class="ln">05</span></div>
-              <div><span class="ln">06</span>def transform(df):</div>
-              <div><span class="ln">07</span>&nbsp;&nbsp;df['ts'] = pd.to_datetime(df['ts'])</div>
-              <div><span class="ln">08</span>&nbsp;&nbsp;<span class="k">return</span> df.groupby('user').agg({'value':'mean'})</div>
+            <div class="code-block active" data-lang="ml">
+              <div><span class="ln">01</span><span class="k">import</span> <span class="f">joblib</span></div>
+              <div><span class="ln">02</span></div>
+              <div><span class="ln">03</span>model = joblib.load(<span class="f">"model.joblib"</span>)</div>
+              <div><span class="ln">04</span>features = [[<span class="n">0.72</span>, <span class="n">18</span>, <span class="n">3.4</span>]]</div>
+              <div><span class="ln">05</span>prediction = model.predict(features)</div>
+              <div><span class="ln">06</span><span class="f">print</span>(<span class="f">"Prediction:"</span>, prediction[<span class="n">0</span>])</div>
             </div>
 
-            <div class="code-block" data-lang="java">
-              <div><span class="ln">01</span><span class="k">@RestController</span></div>
-              <div><span class="ln">02</span><span class="k">public</span> <span class="k">class</span> <span class="f">InsightsController</span> {</div>
-              <div><span class="ln">03</span>&nbsp;&nbsp;<span class="k">@GetMapping</span>("/api/insights")</div>
-              <div><span class="ln">04</span>&nbsp;&nbsp;<span class="k">public</span> <span class="f">ResponseEntity</span>&lt;<span class="f">List</span>&gt; getInsights() {</div>
-              <div><span class="ln">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">var</span> data = <span class="f">pipelineService</span>.run();</div>
-              <div><span class="ln">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="k">return</span> <span class="f">ResponseEntity</span>.ok(data);</div>
-              <div><span class="ln">07</span>&nbsp;&nbsp;}</div>
-              <div><span class="ln">08</span>}</div>
+            <div class="code-block" data-lang="ai">
+              <div><span class="ln">01</span><span class="k">from</span> <span class="f">fastapi</span> <span class="k">import</span> FastAPI</div>
+              <div><span class="ln">02</span></div>
+              <div><span class="ln">03</span>app = FastAPI()</div>
+              <div><span class="ln">04</span></div>
+              <div><span class="ln">05</span><span class="k">@app.post</span>(<span class="f">"/ask"</span>)</div>
+              <div><span class="ln">06</span><span class="k">async def</span> <span class="f">ask</span>(question: str):</div>
+              <div><span class="ln">07</span>&nbsp;&nbsp;answer = <span class="k">await</span> rag_agent.run(question)</div>
+              <div><span class="ln">08</span>&nbsp;&nbsp;<span class="k">return</span> {<span class="f">"answer"</span>: answer}</div>
+            </div>
+
+            <div class="code-block" data-lang="data">
+              <div><span class="ln">01</span><span class="k">from</span> <span class="f">pyspark.sql</span> <span class="k">import</span> functions as F</div>
+              <div><span class="ln">02</span></div>
+              <div><span class="ln">03</span>raw = spark.read.json(<span class="f">"/data/events"</span>)</div>
+              <div><span class="ln">04</span>curated = raw.filter(F.col(<span class="f">"user_id"</span>).isNotNull())</div>
+              <div><span class="ln">05</span>curated = curated.dropDuplicates([<span class="f">"event_id"</span>])</div>
+              <div><span class="ln">06</span>curated.write.format(<span class="f">"delta"</span>) \</div>
+              <div><span class="ln">07</span>&nbsp;&nbsp;.mode(<span class="f">"overwrite"</span>).saveAsTable(<span class="f">"curated_events"</span>)</div>
             </div>
           </div>
           <div class="code-mock-term">
@@ -135,7 +144,7 @@
           </div>
         </div>
         <div class="code-mock-badges">
-          <span>Backend</span><span>ML</span><span>Cloud</span><span>Data</span>
+          <span>AI/ML</span><span>RAG</span><span>Azure</span><span>Data</span>
         </div>
       </div>
     </div>
@@ -149,16 +158,22 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a B.Tech Computer Science Engineering student at KIIT, and a Java backend developer focused on cloud-native systems,
-            data engineering and applied ML. I specialize in building reliable services, ETL pipelines and scalable model deployments.
+            I have completed my B.Tech in Computer Science Engineering at KIIT and now work as an AI/ML Engineer. I enjoy building
+            practical solutions that bring machine learning and generative AI together with real-world data.
           </p>
           <p>
-            My primary languages are Java and Python. I work extensively with cloud data platforms (Azure), Databricks and orchestration
-            tools to move data from raw sources to production insights.
+            I primarily work with Python and Azure, with a focus on retrieval-augmented generation (RAG), embeddings, and vector
+            databases. I use these technologies to make information easier to search and use, and to build AI agents that can
+            respond to questions and support multi-step tasks.
           </p>
           <p>
-            I worked on EEG-based mental-state modelling during an internship at Samsung PRISM. I care about writing software that is
-            correct, observable and reproducible.
+            My data engineering background helps me work across the full journey from raw data to AI applications. I have experience
+            with tools and platforms such as Apache Spark, Databricks, Azure Data Factory, and Delta Lake for processing,
+            transforming, and organizing data.
+          </p>
+          <p>
+            I also have a foundation in machine learning with PyTorch and TensorFlow, and explored EEG-based mental-state prediction
+            during my research internship. I value clear, reliable solutions and enjoy learning new ways to make AI useful.
           </p>
         </div>
         <!-- <div class="dp about-visual">
@@ -174,7 +189,7 @@
     <div class="container">
       <!-- <div class="eyebrow"><span class="idx">02</span> Skills</div> -->
       <h2 class="section-title section-title-legacy">&lt;/Skills&gt;</h2>
-      <p class="section-sub">From the interface a user touches to the pipeline that feeds it - grouped by where each skill sits in that chain.</p>
+      <p class="section-sub">AI/ML engineering, data platforms, and the tools I use to build end-to-end solutions.</p>
 
       <div class="skills-showcase">
         <div class="skill-group">
@@ -183,10 +198,9 @@
             <h3>Languages</h3>
           </div>
           <div class="skill-grid">
-            <div class="skill-card"><img src="assets/tech-logos/java.png" alt="Java"><div><h4>Java</h4><small>Language</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/python.png" alt="Python"><div><h4>Python</h4><small>Language</small></div></div>
+            <div class="skill-card"><img src="assets/tech-logos/java.png" alt="Java"><div><h4>Java</h4><small>Language</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/clogo.png" alt="C"><div><h4>C</h4><small>Language</small></div></div>
-            <div class="skill-card"><img src="assets/tech-logos/cpplogo.png" alt="C++"><div><h4>C++</h4><small>Language</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/console.png" alt="Linux"><div><h4>Linux</h4><small>OS</small></div></div>
           </div>
         </div>
@@ -197,7 +211,6 @@
             <h3>Build & Cloud</h3>
           </div>
           <div class="skill-grid">
-            <div class="skill-card"><img src="assets/tech-logos/spring-boot.png" alt="Spring Boot"><div><h4>Spring Boot</h4><small>Backend</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/azure.png" alt="Azure"><div><h4>Azure</h4><small>Cloud</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/aws.png" alt="AWS"><div><h4>AWS</h4><small>Cloud</small></div></div>
             <div class="skill-card"><img src="assets/tech-logos/gitlogo.png" alt="Git"><div><h4>Git</h4><small>Versioning</small></div></div>
@@ -210,7 +223,7 @@
         <div class="skill-group">
           <div class="skill-group-head">
             <span class="skill-group-tag">AI</span>
-            <h3>AI / ML & Big Data</h3>
+            <h3>AI Engineering & Data Platforms</h3>
           </div>
           <div class="skill-grid">
             <div class="skill-card"><img src="assets/tech-logos/apache-spark.png" alt="Apache Spark"><div><h4>Spark</h4><small>Big data</small></div></div>
@@ -247,24 +260,10 @@
     <div class="container">
       <!-- <div class="eyebrow"><span class="idx">03</span> Projects</div> -->
       <h2 class="section-title section-title-legacy">&lt;/Projects&gt;</h2>
-      <p class="section-sub">Three projects across the stack - full applications, data pipelines and applied ML. The full list is filterable by technology.</p>
+      <p class="section-sub">Projects across AI/ML, data engineering, and software development. The full list is filterable by technology.</p>
 
       <div class="project-grid">
 
-        <div class="card-project">
-          <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">FULL-STACK</span></div>
-          <h3>Staybnb</h3>
-          <p class="desc">Full-stack property rental platform with listing search, booking flow and host management.</p>
-          <p class="metric">↳ REST API + relational schema for bookings & listings</p>
-          <div class="stack-row">
-            <span class="stack-pill">Java</span><span class="stack-pill">Spring Boot</span>
-            <span class="stack-pill">Angular</span><span class="stack-pill">MySQL</span>
-          </div>
-          <div class="card-links">
-            <!-- <a href="#"><i class="fa-brands fa-github"></i> GitHub</a> -->
-            <!-- <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a> -->
-          </div>
-        </div>
 
         <div class="card-project">
           <div class="tag-row"><span class="featured-tag">Featured</span><span class="cat-tag mono">ML / RESEARCH</span></div>
@@ -513,7 +512,7 @@
     <div class="footer-brand">
       <!-- <div class="eyebrow footer-eyebrow"><span class="idx">08</span> Connect</div> -->
       <h2 class="contact-legacy-heading footer-heading-title">GetInTouch();</h2>
-      <p>Open to backend, data engineering, cloud systems, and AI/ML collaborations.</p>
+      <p>Open to AI/ML engineering, data engineering, and Azure cloud collaborations.</p>
     </div>
 
     <div class="footer-cards contact-grid">
